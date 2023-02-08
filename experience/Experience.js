@@ -10,6 +10,7 @@ import Camera from './Camera';
 import Renderer from './Renderer';
 
 import World from './world/World';
+import FPControls from './controls/FPControls';
 
 export default class Experience {
   static instance;
@@ -27,6 +28,7 @@ export default class Experience {
     this.resources = new Resources(assets);
     this.helpers = new Helpers();
     this.world = new World();
+    this.controls = new FPControls();
 
     this.time.on('update', () => this.update());
     this.sizes.on('resize', () => this.resize());
@@ -36,6 +38,7 @@ export default class Experience {
     this.camera.resize();
     this.renderer.resize();
     this.world.resize();
+    this.controls.resize();
   }
 
   update() {
@@ -43,5 +46,6 @@ export default class Experience {
     this.renderer.update();
     this.helpers.update();
     this.world.update();
+    this.controls.update();
   }
 }

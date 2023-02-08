@@ -78,7 +78,7 @@ export default class World {
   }
 
   addVRButton() {
-    document.body.appendChild(this.renderer.vrButton.createButton(this.renderer));
+    document.body.appendChild(this.renderer.vrButton.createButton(this.renderer.renderer));
   }
 
   addStatsButton() {

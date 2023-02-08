@@ -11,7 +11,7 @@ export default class Helpers {
     this.camera = this.experience.camera;
 
     this.setHelpers();
-    // this.setOrbitControls();
+    this.setOrbitControls();
   }
 
   setHelpers() {
@@ -29,6 +29,7 @@ export default class Helpers {
     this.controls.enableDamping = false;
     this.controls.enableZoom = true;
     this.controls.target.set(6, 1.6, -6);
+    // this.controls.enabled = false;
   }
 
   resize() { }
